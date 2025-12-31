@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import gsap from 'gsap'
-import { Rocket, Shield, Zap } from 'lucide-react'
+import { Rocket, Shield, Zap, Calculator} from 'lucide-react'
 import { handleGetStarted, handleViewDocs } from '@/lib/logic'
 
 export const Hero = () => {
@@ -21,7 +21,7 @@ export const Hero = () => {
   }, [])
 
   return (
-    <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white text-black">
+    <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white text-black ">
       <div className="container mx-auto px-4 z-10 text-center">
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
@@ -55,9 +55,9 @@ export const Hero = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24">
           {[
-            { icon: Zap, title: 'TrustWorthy', desc: 'Our Values are based on actual trades' },
-            { icon: Shield, title: 'Secure', desc: 'NextAuth + PostgreSQL' },
-            { icon: Rocket, title: 'Fast', desc: 'Redis + Edge Caching' },
+            { icon: Zap, title: 'Trust Worthy', desc: 'Our Values are based on actual trades' },
+            { icon: Calculator, title: 'Value Calulator', desc: 'Automatically and Rapidly calulate any trades W/L' },
+            { icon: Rocket, title: 'Live', desc: 'Values are constantly updated so you never miss an opportunity' },
           ].map((feature, i) => (
             <motion.div
               key={i}
