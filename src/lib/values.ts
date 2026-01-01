@@ -1,5 +1,5 @@
 export const values = {
-     pcc: {
+  pcc: {
     value: 2000,
     image: "gpoitems/pcc.png",
     name: "PCC",
@@ -9,4 +9,11 @@ export const values = {
     image: "gpoitems/legchest.png",
     name: "Legendary Chest",
   },
-}
+} as const;
+
+export type ItemKey = keyof typeof values;
+
+export const valueItems = Object.entries(values).map(([key, data]) => ({
+  key: key as ItemKey,
+  ...data,
+}));
